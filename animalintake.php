@@ -6,6 +6,7 @@
     </head>
 
     <body>
+        <!-- to still be edited--> 
         <?php
 
         include 'databaseconnection.php' ;
