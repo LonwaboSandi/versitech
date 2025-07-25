@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form To Add Medical Record</title>
+
+    <style>
+        body{background-color:rgb(159, 233, 255)}
+        h2{color:black; text-align: left;}
+        fieldset{border-color: black;}
+    </style>
+</head>
+
+<body>
+    <h2>Add Medical Procedure</h2>
+<fieldset>
+        <br>
+    <form action="addMedicalProcedure.php" method="post" enctype="multipart/form-data">
+
+        <!--display dog information in uneditable format-->
+
+
+        <table width="25%">
+            <!--<tr><th colspan="2">Dog Input Form:</th></tr>-->
+        <tr><td>Medical Procedure ID Number:</td><td><input type="text" id="medicalProcedure_Id" name="medicalProcedure_Id" required></td></tr>
+        <tr><td>Date:</td><td><input type="date" id="medicalProcedureDate" name="medicalProcedureDate" required></td></tr>
+        <tr><td>Veterinary Name:</td><td><input type="text" id="medicalVeterinaryName" name="medicalVeterinaryName" required></td></tr>
+        <tr>
+        <td>Choose Medical Procedure:</td>
+        <td><select id="medicalProcedureType" name="medicalProcedureType" required>
+            <option value="">None</option>
+            <option value="Vaccination">Vaccination</option>
+            <option value="Deworming">Deworming</option>
+            <option value="Sterilization">Sterilization</option>
+            <option value="Microchip">Microchip</option>
+            <option value="Spaying/Neutering">Spaying/Neutering</option>
+            <option value="Treatment">Treatment</option>
+            <option value="Health Checkup">Health Checkup</option>
+        </select></td>
+        </tr>
+        <tr>
+        <td>Medical Procedure Status</td>
+        <td><select id="medicalProcedureStatus" name="medicalProcedureStatus" required>
+            <option value="">None</option>
+            <option value="Pending">Pending</option>
+            <option value="Scheduled">Scheduled</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+            <option value="Cancelled">Cancelled</option>
+        </select></td>
+        </tr>
+        
+        <tr><td>Additional Notes</td>
+            <td><input type="text" id="medicalProcedureNotes" name="medicalProcedureNotes"></td>
+        </tr>
+
+        <tr>
+            <td><input type="submit" value=" Add Medical Procedure Record "></td>
+            <td><input type="reset" value="Clear Form"></td>
+        </tr>
+
+        </table>
+    </form>
+</fieldset>
+</body>
+</html>
