@@ -8,7 +8,7 @@ $sql_select = "SELECT * FROM medicalprocedure where didnum = '$dog_Id' ";
 $result = $conn->query($sql_select);
 $row2 = $result->fetch_assoc();
 
-echo "dog idnumber = ". $dog_Id. " extracted from the URL using GET<br/>";
+echo "dog idnumber = ". $dog_Id. " extracted from the URL using GET<br/>"; //
 
 echo "dog idnumber = ". $row2['didnum']. " extracted from database using query";
 
