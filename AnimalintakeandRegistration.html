@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+
+
 <html>
 <head>
     <meta charset="UTF-8" />
@@ -7,25 +9,36 @@
     <link rel="stylesheet" href="Animalntake.css">
 </head>
 <body>
-    <form action="animalIntake.php" method="post">
+
+    <!--  correct input types -->
+    <!--  put names and ids for input fields-->
+    <!-- added buttons, creating record; clearing form -->
+    <!-- REMINDER: return pictures to be required -->
+     <!-- health details field -->
+
+    <form action="animalIntake.php" method="post" enctype="multipart/form-data">
       <table>
         <tr><th1 colspan="6">Animal Intake And Registration Form:</th1>
-        <tr><td>Animal ID:</td><td><input type="INT" value="" required></td></tr>
-        <tr><td>Name:</td><td><input type="text" size="30" value="" required></td></tr>
-        <tr><td>Species:</td><td><input type="text" size="30" value="" required></td></tr>
+        <tr><td>Animal ID: </td>
+        <td><input type="text" name="aId" id="aId" value="" required></td></tr> 
+        <tr><td>Name: </td>
+        <td><input type="text" name="aName" id="aName" size="30"  required></td></tr>
+
+
         <tr></tr><td>Species:</td><td>
             <select name="aSpecies" id="aSpecies" required>
-              <option value="">None</option>
-              <option value="Dog">Dog</option>
-              <option value="Donkey ">Donkey</option>
-              <option value="Cat">Cat</option>
-              <option value="Sheep">Sheep</option>
-              <option value="Pigs">Pigs</option>
-              <option value="Goat">Goat</option>
-              <option value="Horses">Horses</option>
+              <option value=""> None </option>
+              <option value="Dog"> Dog </option>
+              <option value="Donkey"> Donkey </option>
+              <option value="Cat"> Cat </option>
+              <option value="Sheep"> Sheep </option>
+              <option value="Pigs"> Pigs </option>
+              <option value="Goat"> Goat </option>
+              <option value="Horses"> Horses </option>
              </select></td></tr>
+
         <tr></tr><td>Breed:</td><td>
-          <select name="aBreed" id="abreed" required >
+          <select name="abreed" id="abreed" required >
 
             <option value="">None</option>
             <option value="Afferpinscher">Afferpinscher</option>
@@ -40,19 +53,30 @@
             <option value="Labrador Retriever">Labrador Retriever</option>
             <option value=" Rhodesian Ridgeback">Rhodesian Ridgeback</option></select>
 
-        <tr><td>Age:</td><td><input type="INT"  value="" required></td></tr>
+        <tr><td>Age:</td>
+        <td><input type="text" name="aAge" id="aAge" required></td></tr>
+
         <tr></tr><td>Gender:</td><td>
-          <select name="agender" id="agender" required >
+          <select name="aGender" id="aGender" required >
             <option value="Female">Female</option>
             <option value="Male">Male</option>
           </select>
-        
-        <tr><td>Rescue Details:</td><td><input type="text" size="70" value="" required></td></tr>
-        <tr><td>Health Status:</td><td><input type="text" size="20" value="" required></td></tr>
-        <tr><td>Height:</td><td><input type="INT"  value="" required></td></tr>
-        <tr><td>Weight:</td><td><input type="INT"  value="" required></td></tr>
-        <tr><td>Image:</td><td><input type="image" size="100" value="" required></td></tr>
-   
+
+        <tr><td>Rescue Details:</td><td><input type="text" name= "aRescueDetail" id="aRescueDetail" size="70" value="" required></td></tr>
+        <!-- <tr><td>Health Status:</td><td><input type="text" name="aHealthStatus" id="aHealthStatus" size="20" value="" required></td></tr> -->
+         <tr></tr><td>Health Status:</td><td>
+            <select name="aHealthStatus" id="aHealthStatus" required>
+              <option value=""> None </option>
+              <option value="Healthy"> Healthy </option>
+              <option value="Unhealthy"> Unhealthy </option>
+        <tr><td>Height:</td><td><input type="text" name="aHeight" id="aHeight" required></td></tr>
+        <tr><td>Weight:</td><td><input type="text" name="aWeight" id="aWeight" required></td></tr>
+        <tr><td>Image:</td><td><input type="file" name="aPicture" id="aPicture" size="100"></td></tr>
+          <tr>
+                <td> <input type="submit" value="Create animal record" > </td>
+                <td> <input type="reset" value="Clear form"> </td>
+            </tr>
+
       </table>
 </body>
 </html>
