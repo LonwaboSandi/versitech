@@ -1,0 +1,14 @@
+   body{background-color:rgb(159, 233, 255)}
+        h2{color:black; text-align: left;}
+        fieldset{border-color: black;}
+          /* Make all text, number, email inputs and select dropdowns 300px wide */
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  select {
+    width: 300px;
+    box-sizing: border-box; /* ensures padding/border don’t increase total width */
+  }
+  td label {
+  white-space: nowrap;
+}
